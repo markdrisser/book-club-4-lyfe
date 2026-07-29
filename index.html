@@ -35,23 +35,26 @@
             font-weight: bold;
             padding: 18px 0;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 24px;
+            flex-wrap: wrap;
         }
 
         nav ul li a {
             color: #f5deb3;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             letter-spacing: 0.5px;
             padding: 18px 0;
             display: block;
             border-bottom: 2px solid transparent;
             transition: border-color 0.2s;
+            white-space: nowrap;
         }
 
         nav ul li a:hover,
@@ -314,6 +317,35 @@
             font-weight: bold;
         }
 
+        /* GRIEVANCES / MISPRONOUNCED / CREDITS LIST STYLE */
+        .list-card {
+            background-color: #fff;
+            border: 1px solid #e8d5b7;
+            border-left: 4px solid #d4a96a;
+            border-radius: 6px;
+            padding: 18px 22px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .list-card .who {
+            font-weight: bold;
+            color: #3b2f2f;
+            margin-bottom: 6px;
+        }
+
+        .list-card .detail {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .placeholder-note {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
         /* FOOTER */
         footer {
             background-color: #3b2f2f;
@@ -334,6 +366,9 @@
             <li><a href="#" onclick="showPage('books', this)">Books</a></li>
             <li><a href="#" onclick="showPage('stats', this)">Stats</a></li>
             <li><a href="#" onclick="showPage('members', this)">Members</a></li>
+            <li><a href="#" onclick="showPage('grievances', this)">Grievances</a></li>
+            <li><a href="#" onclick="showPage('mispronounced', this)">Mispronounced Names</a></li>
+            <li><a href="#" onclick="showPage('credits', this)">Credits</a></li>
         </ul>
     </nav>
 
@@ -426,7 +461,7 @@
         <td>—</td>
     </tr>
     <tr>
-        <td>1</td>
+        <td>4</td>
         <td>House on Fripp Island</td>
         <td>Rebecca Kauffman</td>
         <td><span class="poll-winner">Matt</span></td>
@@ -434,7 +469,7 @@
         <td>July 8, 2020</td>
     </tr>
     <tr>
-        <td>2</td>
+        <td>5</td>
         <td>Conversations with Friends</td>
         <td>Sally Rooney</td>
         <td><span class="poll-winner">Jason</span></td>
@@ -442,7 +477,7 @@
         <td>—</td>
     </tr>
     <tr>
-        <td>3</td>
+        <td>6</td>
         <td>The Vanishing Half</td>
         <td>Brit Bennett</td>
         <td><span class="poll-winner">Mark</span> <span class="poll-winner">Michael</span></td>
@@ -450,7 +485,7 @@
         <td>February 3, 2021</td>
     </tr>
     <tr>
-        <td>4</td>
+        <td>7</td>
         <td>Circe</td>
         <td>Madeline Miller</td>
         <td><span class="poll-winner">Michael</span></td>
@@ -458,7 +493,7 @@
         <td>April 12, 2021</td>
     </tr>
     <tr>
-        <td>5</td>
+        <td>8</td>
         <td>Beartown</td>
         <td>Fredrik Backman</td>
         <td><span class="poll-winner">Mark</span></td>
@@ -466,7 +501,7 @@
         <td>June 28, 2021</td>
     </tr>
     <tr>
-        <td>6</td>
+        <td>9</td>
         <td>A Gentleman in Moscow</td>
         <td>Amor Towles</td>
         <td><span class="poll-winner">Mark</span> <span class="poll-winner">Matt</span></td>
@@ -474,7 +509,7 @@
         <td>—</td>
     </tr>
     <tr>
-        <td>7</td>
+        <td>10</td>
         <td>The Plot</td>
         <td>Jean Hanff Korelitz</td>
         <td><span class="poll-winner">Michael</span></td>
@@ -482,7 +517,7 @@
         <td>—</td>
     </tr>
     <tr>
-        <td>8</td>
+        <td>11</td>
         <td>The 7½ Deaths of Evelyn Hardcastle</td>
         <td>Stuart Turton</td>
         <td><span class="poll-winner">Michael</span></td>
@@ -490,7 +525,7 @@
         <td>—</td>
     </tr>
     <tr>
-        <td>9</td>
+        <td>12</td>
         <td>The Measure</td>
         <td>Nikki Erlick</td>
         <td><span class="poll-winner">Mark</span></td>
@@ -498,7 +533,7 @@
         <td>—</td>
     </tr>
     <tr>
-        <td>10</td>
+        <td>13</td>
         <td>Tomorrow, and Tomorrow, and Tomorrow</td>
         <td>Gabrielle Zevin</td>
         <td><span class="poll-winner">Matt</span></td>
@@ -506,7 +541,7 @@
         <td>April 25, 2023</td>
     </tr>
     <tr>
-        <td>11</td>
+        <td>14</td>
         <td>The People in the Trees</td>
         <td>Hanya Yanagihara</td>
         <td><span class="poll-winner">Matt</span></td>
@@ -514,7 +549,7 @@
         <td>October 10, 2023</td>
     </tr>
     <tr>
-        <td>12</td>
+        <td>15</td>
         <td>The Midnight Library</td>
         <td>Matt Haig</td>
         <td><span class="poll-winner">Michael</span></td>
@@ -522,7 +557,7 @@
         <td>May 20, 2024</td>
     </tr>
     <tr>
-        <td>13</td>
+        <td>16</td>
         <td>Birnam Wood</td>
         <td>Eleanor Catton</td>
         <td><span class="poll-winner">Mark</span></td>
@@ -530,7 +565,7 @@
         <td>September 3, 2024</td>
     </tr>
     <tr>
-        <td>14</td>
+        <td>17</td>
         <td>Demon Copperhead</td>
         <td>Barbara Kingsolver</td>
         <td><span class="poll-winner">Jason</span></td>
@@ -538,7 +573,7 @@
         <td>November 21, 2024</td>
     </tr>
     <tr>
-        <td>15</td>
+        <td>18</td>
         <td>The House in the Cerulean Sea</td>
         <td>TJ Klune</td>
         <td><span class="poll-winner">Michael</span></td>
@@ -546,7 +581,7 @@
         <td>February 6, 2025</td>
     </tr>
     <tr>
-        <td>16</td>
+        <td>19</td>
         <td>Aurora</td>
         <td>Kim Stanley Robinson</td>
         <td><span class="poll-winner">Michael</span></td>
@@ -554,7 +589,7 @@
         <td>May 13, 2025</td>
     </tr>
     <tr>
-        <td>17</td>
+        <td>20</td>
         <td>The Serpent & the Wings of Night*</td>
         <td>Carissa Broadbent</td>
         <td><span class="poll-winner">Matt</span></td>
@@ -562,7 +597,7 @@
         <td>August 30, 2025</td>
     </tr>
     <tr>
-        <td>18</td>
+        <td>21</td>
         <td>The Ashes & the Star-Cursed King*</td>
         <td>Carissa Broadbent</td>
         <td><span class="poll-winner">Jason</span> <span class="poll-winner">Bryn</span></td>
@@ -570,7 +605,7 @@
         <td>October 7, 2025</td>
     </tr>
     <tr>
-        <td>19</td>
+        <td>22</td>
         <td>The Last Murder at the End of the World</td>
         <td>Stuart Turton</td>
         <td><span class="poll-winner">Michael</span> <span class="poll-winner">Matt</span></td>
@@ -578,7 +613,7 @@
         <td>February 3, 2026</td>
     </tr>
     <tr>
-        <td>20</td>
+        <td>23</td>
         <td>The Reservation</td>
         <td>Rebecca Kauffman</td>
         <td><span class="poll-winner">Jason</span></td>
@@ -586,7 +621,7 @@
         <td>May 5, 2026</td>
     </tr>
     <tr class="tbd-row">
-        <td>21</td>
+        <td>24</td>
         <td>TBD</td>
         <td>—</td>
         <td>—</td>
@@ -705,38 +740,105 @@
         </div>
     </div>
 
-    <!-- MEMBERS PAGE -->
-    <div id="members" class="page">
+<!-- MEMBERS PAGE -->
+<div id="members" class="page">
+    <div class="section-wrap">
+        <h2 class="section-title">Meet the Members</h2>
+        <p class="section-intro">
+            Four friends from college, keeping the conversation going one book at a time.
+        </p>
+        <div class="members-grid">
+            <div class="member-card">
+                <div class="member-avatar">M</div>
+                <h3>Matt</h3>
+                <p>Store manager, dad to Louisa, husband to Kara, and the group's resident overthinker of lunar phases. Matt keeps the book club honest by actually finishing the books (mostly) and consulting ChatGPT on hard-to-pronounce names when all else fails. Recently said goodbye to longtime dog Nina after 14 wonderful years, and is currently gearing up for a 13-hour flight to New Zealand with the whole family — sky couch included.</p>
+                <div class="member-wins">⭐ 6 Wins</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">M</div>
+                <h3>Michael</h3>
+                <p>West Coast–based higher ed professional, hiking enthusiast, and cat dad to the ever-dignified Revere. Michael's ankle injury from 2023 hasn't stopped him from logging 10-mile hikes with thousands of feet of vertical gain, though downhill sections remain a work in progress. Known for his home office upgrades and being the only member of the group who has never once left a Goodreads review.</p>
+                <div class="member-wins">⭐ 8 Wins</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">M</div>
+                <h3>Mark</h3>
+                <p>Federal employee, soccer coach, and current meniscus-recovery-arc protagonist, tracking his knee's degree of bend with the enthusiasm of a man who once ran a marathon on minimal training and lived to tell about it. When he's not consulting audiobooks for the "authoritative" pronunciation of character names, he's dodging squirrels near his home office or planning the next ski trip.</p>
+                <div class="member-wins">⭐ 5 Wins</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">J</div>
+                <h3>Jason</h3>
+                <p style="font-style: italic; color: #b08a4a; margin-bottom: 8px; border: none; padding: 0;">(aka Deborah, aka Debbie — never Brah, sadly)</p>
+                <p>PhD, founder of Good Insights Consulting, and the book club's unofficial Chief Poll Officer, responsible for turning every ending into a multiple-choice quiz (with scoring rubric). Parent to James and Mara, PTO co-president, proud owner of a very destructive new Cavapoo named Dolly Mae, and keeper of a Disney pin collection reportedly worth more than most of our vacations combined.</p>
+                <div class="member-wins">⭐ 4 Wins</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- GRIEVANCES PAGE -->
+    <div id="grievances" class="page">
         <div class="section-wrap">
-            <h2 class="section-title">Meet the Members</h2>
+            <h2 class="section-title">Grievances</h2>
             <p class="section-intro">
-                Four friends from college, keeping the conversation going one book at a time.
+                A running record of complaints, callouts, and unresolved beefs. All in good fun (mostly).
             </p>
-            <div class="members-grid">
-                <div class="member-card">
-                    <div class="member-avatar">M</div>
-                    <h3>Matt</h3>
-                    <p>Bio coming soon — add a few sentences about yourself here: where you're from, what you do, what you love to read, a fun fact, etc.</p>
-                    <div class="member-wins">⭐ 6 Wins</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-avatar">M</div>
-                    <h3>Michael</h3>
-                    <p>Bio coming soon — add a few sentences about yourself here: where you're from, what you do, what you love to read, a fun fact, etc.</p>
-                    <div class="member-wins">⭐ 8 Wins</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-avatar">M</div>
-                    <h3>Mark</h3>
-                    <p>Bio coming soon — add a few sentences about yourself here: where you're from, what you do, what you love to read, a fun fact, etc.</p>
-                    <div class="member-wins">⭐ 5 Wins</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-avatar">J</div>
-                    <h3>Jason</h3>
-                    <p>Bio coming soon — add a few sentences about yourself here: where you're from, what you do, what you love to read, a fun fact, etc.</p>
-                    <div class="member-wins">⭐ 4 Wins</div>
-                </div>
+            <div class="list-card">
+                <div class="who">Matt</div>
+                <div class="detail placeholder-note">For the horrendous recommendation of Aurora.</div>
+            </div>
+            <div class="list-card">
+                <div class="who">Placeholder Grievance #2</div>
+                <div class="detail placeholder-note">Add a grievance here — who it's against, what happened, and any relevant details.</div>
+            </div>
+            <div class="list-card">
+                <div class="who">Placeholder Grievance #3</div>
+                <div class="detail placeholder-note">Add a grievance here — who it's against, what happened, and any relevant details.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MISPRONOUNCED NAMES PAGE -->
+    <div id="mispronounced" class="page">
+        <div class="section-wrap">
+            <h2 class="section-title">Mispronounced Names</h2>
+            <p class="section-intro">
+                A hall of shame for the character and author names we absolutely butchered out loud.
+            </p>
+            <div class="list-card">
+                <div class="who">Matt</div>
+                <div class="detail placeholder-note">Glaucos is a mortal fisherman, Circe's first love, and the catalyst for her discovery of witchcraft. Matt shamefully pronounced this "Glaushkosh."</div>
+            </div>
+            <div class="list-card">
+                <div class="who">Placeholder Name #2</div>
+                <div class="detail placeholder-note">Add the name, who mispronounced it, how it was said, and the correct pronunciation.</div>
+            </div>
+            <div class="list-card">
+                <div class="who">Placeholder Name #3</div>
+                <div class="detail placeholder-note">Add the name, who mispronounced it, how it was said, and the correct pronunciation.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CREDITS PAGE -->
+    <div id="credits" class="page">
+        <div class="section-wrap">
+            <h2 class="section-title">Credits</h2>
+            <p class="section-intro">
+                A thank-you to everyone and everything that made this book club (and this site) possible.
+            </p>
+            <div class="list-card">
+                <div class="who">Matt, CSO</div>
+                <div class="detail placeholder-note">Chief Spreasheet Officer</div>
+            </div>
+            <div class="list-card">
+                <div class="who">Jason, CPO</div>
+                <div class="detail placeholder-note">Chief Poll Office</div>
+            </div>
+            <div class="list-card">
+                <div class="who">Mark</div>
+                <div class="detail placeholder-note">Webmaster</div>
             </div>
         </div>
     </div>
